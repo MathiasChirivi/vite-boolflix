@@ -28,4 +28,10 @@ export default {
   <footer></footer>
 </template>
 
-<style scoped></style>
+<style scoped>
+main {
+  height: calc(100vh - 80px);
+  background-color: #222;
+  padding-top: 30px;
+}
+</style>
