@@ -1,7 +1,24 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
+<script >
+import AppTitle from './components/AppTitle.vue'
+
+import axios from 'axios';
+// import { store } from './data/store';
+
+
+
+export default {
+  components: {
+    AppTitle,
+  }
+}
 </script>
 
-<template></template>
+<template>
+  <header>
+    <AppTitle />
+  </header>
+  <main></main>
+  <footer></footer>
+</template>
 
 <style scoped></style>
