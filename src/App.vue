@@ -1,15 +1,20 @@
 <script >
 import AppTitle from './components/AppTitle.vue'
-
+import AppMain from './components/AppMain.vue'
 import axios from 'axios';
-// import { store } from './data/store';
-
-
+// import axios from 'axios';
+import { store } from './data/store';
 
 export default {
   components: {
     AppTitle,
-  }
+    AppMain
+  },
+  data() {
+    return {
+      store,
+    }
+  },
 }
 </script>
 
@@ -17,7 +22,9 @@ export default {
   <header>
     <AppTitle />
   </header>
-  <main></main>
+  <main>
+    <AppMain />
+  </main>
   <footer></footer>
 </template>
 
