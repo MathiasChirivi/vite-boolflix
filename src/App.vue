@@ -30,8 +30,11 @@ export default {
 
 <style scoped>
 main {
-  height: calc(100vh - 80px);
   background-color: #222;
-  padding-top: 30px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 </style>
