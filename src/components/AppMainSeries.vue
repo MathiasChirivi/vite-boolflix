@@ -28,11 +28,11 @@ export default {
     <section class="cardELement">
         <div class="templateCard" v-for="Series in store.cardSeriesTv">
             <div class="cardContent">
-                <div v-if="store.imgFilm + Series.backdrop_path === null">
-                    <p class="fs-5 pt-5 text-center">{{ Series.title }} {{ Series.name }}</p>
+                <div v-if="store.imgFilm + Series.backdrop_path != null">
+                    <img :src="store.imgFilm + Series.backdrop_path" alt="">
                 </div>
                 <div v-else>
-                    <img :src="store.imgFilm + Series.backdrop_path" alt="">
+                    <p class="fs-5 pt-5 text-center">{{ Series.title }} {{ Series.name }}</p>
                 </div>
                 <h3>{{ Series.name }}</h3>
                 <p>Titolo Originale: {{ Series.original_name }}</p>
