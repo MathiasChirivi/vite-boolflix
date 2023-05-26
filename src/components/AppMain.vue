@@ -1,5 +1,6 @@
 <script >
 import LanguageFlag from './LanguageFlag.vue';
+import AppStar from './AppStar.vue'
 import { store } from '../data/store';
 import axios from 'axios';
 
@@ -7,6 +8,7 @@ export default {
     name: "AppMain",
     components: {
         LanguageFlag,
+        AppStar
     },
     data() {
         return {
@@ -37,7 +39,7 @@ export default {
                 <h3>{{ movie.title }}</h3>
                 <p>Titolo Originale: {{ movie.original_title }}</p>
                 <LanguageFlag :movieLanguage="movie.original_language" />
-                <p>Voto: {{ movie.vote_average }}</p>
+                <AppStar :itemRating="movie.vote_average" />
             </div>
         </div>
     </section>
