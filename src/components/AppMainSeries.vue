@@ -29,7 +29,7 @@ export default {
         <div class="templateCard" v-for="Series in store.cardSeriesTv">
             <div class="cardContent">
                 <div v-if="store.imgFilm + Series.backdrop_path === null">
-                    <p class="fs-5 pt-5 text-center">{{ item.title }} {{ item.name }}</p>
+                    <p class="fs-5 pt-5 text-center">{{ Series.title }} {{ Series.name }}</p>
                 </div>
                 <div v-else>
                     <img :src="store.imgFilm + Series.backdrop_path" alt="">
