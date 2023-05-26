@@ -7,6 +7,7 @@ export default {
         return {
             store,
             chosenfilm: null,
+            chosenSeries: null,
         }
     },
     methods: {
@@ -14,12 +15,22 @@ export default {
             let addressFilm = this.store.apiUrl + this.chosenfilm;
             this.titleadd(addressFilm);
         },
+        searchSeries() {
+            let addressSeriesTv = this.store.apiUrlTv + this.chosenSeries;
+            this.titleaddSeries(addressSeriesTv);
+        },
         titleadd(addressFilm) {
             axios.get(addressFilm).then(r => {
                 this.store.cardFilm = [];
                 this.store.cardFilm = r.data.results;
             });
-        }
+        },
+        titleaddSeries(addressSeriesTv) {
+            axios.get(addressSeriesTv).then(r => {
+                this.store.cardSeriesTv = [];
+                this.store.cardSeriesTv = r.data.results;
+            });
+        },
     }
 }
 
@@ -32,7 +43,8 @@ export default {
                 <h2 class="text-danger">BOOFLIX</h2>
             </div>
             <div>
-                <input @keyup="searchFIlm" v-model="chosenfilm" type="text" placeholder="Inserisci un Film">
+                <input @keyup="searchFIlm" @keydown="searchSeries" v-model="chosenfilm" type="text"
+                    placeholder="Inserisci un Film">
                 <button><i class="fa-solid fa-magnifying-glass" style="color: #000000;"></i></button>
             </div>
         </div>

@@ -1,6 +1,7 @@
 <script >
 import AppTitle from './components/AppTitle.vue'
 import AppMain from './components/AppMain.vue'
+import AppMainSeries from './components/AppMainSeries.vue'
 import axios from 'axios';
 // import axios from 'axios';
 import { store } from './data/store';
@@ -8,7 +9,8 @@ import { store } from './data/store';
 export default {
   components: {
     AppTitle,
-    AppMain
+    AppMain,
+    AppMainSeries
   },
   data() {
     return {
@@ -24,6 +26,7 @@ export default {
   </header>
   <main>
     <AppMain />
+    <AppMainSeries />
   </main>
   <footer></footer>
 </template>
