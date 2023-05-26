@@ -28,7 +28,7 @@ export default {
     <section class="cardELement">
         <div class="templateCard" v-for="movie in store.cardFilm">
             <div class="cardContent">
-                <div v-if="store.imgFilm + movie.backdrop_path != null">
+                <div v-if="movie.backdrop_path != null">
                     <img :src="store.imgFilm + movie.backdrop_path" alt="">
                 </div>
                 <div v-else>
