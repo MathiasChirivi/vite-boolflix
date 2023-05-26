@@ -7,7 +7,6 @@ export default {
         return {
             store,
             chosenfilm: null,
-            chosenSeries: null,
         }
     },
     methods: {
@@ -16,7 +15,7 @@ export default {
             this.titleadd(addressFilm);
         },
         searchSeries() {
-            let addressSeriesTv = this.store.apiUrlTv + this.chosenSeries;
+            let addressSeriesTv = this.store.apiUrlTv + this.chosenfilm;
             this.titleaddSeries(addressSeriesTv);
         },
         titleadd(addressFilm) {
@@ -31,6 +30,10 @@ export default {
                 this.store.cardSeriesTv = r.data.results;
             });
         },
+        searchFilmSeries() {
+            this.searchFIlm();
+            this.searchSeries();
+        }
     }
 }
 
@@ -43,8 +46,7 @@ export default {
                 <h2 class="text-danger">BOOFLIX</h2>
             </div>
             <div>
-                <input @keyup="searchFIlm" @keydown="searchSeries" v-model="chosenfilm" type="text"
-                    placeholder="Inserisci un Film">
+                <input @keyup="searchFilmSeries" v-model="chosenfilm" type="text" placeholder="Inserisci un Film">
                 <button><i class="fa-solid fa-magnifying-glass" style="color: #000000;"></i></button>
             </div>
         </div>

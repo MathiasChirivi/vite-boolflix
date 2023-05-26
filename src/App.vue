@@ -10,7 +10,7 @@ export default {
   components: {
     AppTitle,
     AppMain,
-    AppMainSeries
+    AppMainSeries,
   },
   data() {
     return {
