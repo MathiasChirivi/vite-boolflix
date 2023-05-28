@@ -47,6 +47,10 @@ export default {
                             <p>Titolo Originale: {{ Series.original_name }}</p>
                             <LanguageFlag :movieLanguage="Series.original_language" />
                             <AppStar :itemRating="Series.vote_average" />
+                            <div class="overview pt-2">
+                                <h5>Overview: </h5>
+                                <p class="fs-5">{{ Series.overview }}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -55,13 +59,13 @@ export default {
     </section>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .cardELement {
     padding: 30px;
     background-color: #222;
     color: white;
     width: 100%;
-    min-height: 200px;
+    height: 100%;
     display: flex;
     gap: 2rem;
     overflow-x: auto;
@@ -92,8 +96,9 @@ export default {
 .flip-card-front,
 .flip-card-back {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 342px;
+    height: 192px;
+    overflow-y: auto;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }
@@ -114,7 +119,9 @@ export default {
     height: 192px;
 }
 
-.cardContent {
-    min-width: 350px;
+.overview {
+    p {
+        line-height: 25px;
+    }
 }
 </style>

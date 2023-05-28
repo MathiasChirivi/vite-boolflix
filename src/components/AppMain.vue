@@ -28,13 +28,13 @@ export default {
 <template >
     <h2 class="text-white mt-4">Lista film</h2>
     <section class="cardELement">
-        <div class="templateCard" v-for="movie in store.cardFilm">
+        <div class="templateCard position-relative" v-for="movie in store.cardFilm">
             <div class="cardContent">
                 <div class="flip-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
                             <div v-if="movie.backdrop_path != null">
-                                <img :src="store.imgFilm + movie.backdrop_path" alt="">
+                                <img class="imgCard" :src="store.imgFilm + movie.backdrop_path" alt="">
                             </div>
                             <div v-else>
                                 <img class="widthImage"
@@ -47,6 +47,10 @@ export default {
                             <p>Titolo Originale: {{ movie.original_title }}</p>
                             <LanguageFlag :movieLanguage="movie.original_language" />
                             <AppStar :itemRating="movie.vote_average" />
+                            <div class="overview pt-2">
+                                <h5>Overview: </h5>
+                                <p class="fs-5">{{ movie.overview }}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -55,17 +59,18 @@ export default {
     </section>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .cardELement {
     padding: 30px;
     background-color: #222;
     color: white;
     width: 100%;
-    min-height: 200px;
+    height: 100%;
     display: flex;
     gap: 2rem;
     overflow-x: auto;
 }
+
 
 .flip-card {
     background-color: transparent;
@@ -91,8 +96,9 @@ export default {
 .flip-card-front,
 .flip-card-back {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 342px;
+    height: 192px;
+    overflow-y: auto;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }
@@ -113,7 +119,9 @@ export default {
     height: 192px;
 }
 
-.cardContent {
-    min-width: 350px;
+.overview {
+    p {
+        line-height: 25px;
+    }
 }
 </style>
