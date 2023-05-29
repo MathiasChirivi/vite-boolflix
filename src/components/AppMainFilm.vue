@@ -5,7 +5,7 @@ import { store } from '../data/store';
 import axios from 'axios';
 
 export default {
-    name: "AppMain",
+    name: "AppMainFilm",
     components: {
         LanguageFlag,
         AppStar
@@ -16,7 +16,7 @@ export default {
         }
     },
     mounted() {
-        axios.get(this.store.apiUrl).then(r => {
+        axios.get(this.store.apiUrl + "a").then(r => {
             this.store.cardFilm = [];
             this.store.cardFilm = r.data.results;
         })

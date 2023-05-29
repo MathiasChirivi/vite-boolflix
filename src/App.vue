@@ -1,6 +1,6 @@
 <script >
 import AppTitle from './components/AppTitle.vue'
-import AppMain from './components/AppMain.vue'
+import AppMainFilm from './components/AppMainFilm.vue'
 import AppMainSeries from './components/AppMainSeries.vue'
 import axios from 'axios';
 // import axios from 'axios';
@@ -9,7 +9,7 @@ import { store } from './data/store';
 export default {
   components: {
     AppTitle,
-    AppMain,
+    AppMainFilm,
     AppMainSeries,
   },
   data() {
@@ -25,7 +25,7 @@ export default {
     <AppTitle />
   </header>
   <main>
-    <AppMain />
+    <AppMainFilm />
     <AppMainSeries />
   </main>
   <footer></footer>

@@ -16,7 +16,7 @@ export default {
         }
     },
     mounted() {
-        axios.get(this.store.apiUrlTv).then(r => {
+        axios.get(this.store.apiUrlTv + "a").then(r => {
             this.store.cardSeriesTv = [];
             this.store.cardSeriesTv = r.data.results;
         })
