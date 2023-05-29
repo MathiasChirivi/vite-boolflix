@@ -38,5 +38,6 @@ main {
   display: flex;
   flex-direction: column;
   padding-left: 50px;
+  padding-bottom: 50px;
 }
 </style>
