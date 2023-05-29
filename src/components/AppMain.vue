@@ -26,7 +26,7 @@ export default {
 </script>
 
 <template >
-    <h2 class="text-white mt-4">Lista film</h2>
+    <h2 class="text-white text-start mt-4">Film</h2>
     <section class="cardELement">
         <div class="templateCard position-relative" v-for="movie in store.cardFilm">
             <div class="cardContent">
@@ -62,7 +62,7 @@ export default {
 
 <style lang="scss" scoped>
 .cardELement {
-    padding: 30px;
+    padding: 20px;
     background-color: #222;
     color: white;
     width: 100%;

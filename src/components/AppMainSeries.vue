@@ -26,7 +26,7 @@ export default {
 </script>
 
 <template >
-    <h2 class="text-white mt-4">Lista Serie Tv</h2>
+    <h2 class="text-white mt-4">Serie Tv</h2>
     <section class="cardELement">
         <div class="templateCard" v-for="Series in store.cardSeriesTv">
             <div class="cardContent">
@@ -62,7 +62,7 @@ export default {
 
 <style lang="scss" scoped>
 .cardELement {
-    padding: 30px;
+    padding: 20px;
     background-color: #222;
     color: white;
     width: 100%;
