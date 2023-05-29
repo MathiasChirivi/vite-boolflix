@@ -46,7 +46,7 @@ export default {
                             <h5>{{ Series.name }}</h5>
                             <p>Titolo Originale: {{ Series.original_name }}</p>
                             <LanguageFlag :movieLanguage="Series.original_language" />
-                            <AppStar :itemRating="Series.vote_average" />
+                            <AppStar :itemRate="Series.vote_average" />
                             <div class="overview pt-2">
                                 <h5>Overview: </h5>
                                 <p class="fs-5">{{ Series.overview }}</p>
