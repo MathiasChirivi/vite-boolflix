@@ -13,8 +13,8 @@ export default {
     </div>
     <div v-else class="d-flex align-items-center raitStar pt-1">
         <h5 class="pe-2">Voto:</h5>
-        <img src=" src/assets/starYellow.png" v-for="star in Math.ceil(itemRating / 2)">
-        <img src=" src/assets/starGrey.jpg" v-for="starGrey in (5 - (Math.ceil(itemRating / 2)))">
+        <img src=" src/assets/Gold_Star.svg.png" v-for="star in Math.ceil(itemRating / 2)">
+        <img src=" src/assets/starGrey.png" v-for="starGrey in (5 - (Math.ceil(itemRating / 2)))">
     </div>
 </template>
 
