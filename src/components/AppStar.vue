@@ -8,12 +8,14 @@ export default {
 </script>
 
 <template>
+    <!-- GESTIAMO LE STELLE, SE IL FILM NON E' STATO VOTATO -->
     <div v-if="Math.ceil(itemRate / 2) === 0" class="raitStar">
         <div class="d-flex align-items-center raitStar pt-1">
             <h5 class="pe-2">Voto:</h5>
             <img src=" src/assets/starGrey.png" v-for="starGrey in (5 - (Math.ceil(itemRate / 2)))">
         </div>
     </div>
+    <!-- GESTIAMO LE STELLE, SE IL FILM E' STATO VOTATO -->
     <div v-else class="d-flex align-items-center raitStar pt-1">
         <h5 class="pe-2">Voto:</h5>
         <img src=" src/assets/Gold_Star.svg.png" v-for="star in Math.ceil(itemRate / 2)">
@@ -28,4 +30,4 @@ export default {
         height: 25px;
     }
 }
-</style>z
+</style>
